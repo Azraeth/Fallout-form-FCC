@@ -1,0 +1,103 @@
+/* fonts declarations: */
+@import url("https://fonts.cdnfonts.com/css/monofonto");
+@import url("https://fonts.cdnfonts.com/css/fixedsys-excelsior-301");
+@import url('https://fonts.cdnfonts.com/css/share-tech-2');
+@import url('https://fonts.cdnfonts.com/css/roboto');
+
+:root {
+  --color-primary: #325886;
+  --color-secundary: #FEF265;
+  --color-dark: #001423;
+  --color-light: #FCE8A4;
+  --color-white: #FFFFFF;
+  --color-pipboy: #177314;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Share Tech", "Fixedsys Excelsior 3.01", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-white);
+  margin: 0;
+}
+
+/* mobile friendly alternative to using background-attachment: fixed */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-primary);
+  background-image: linear-gradient(
+      115deg,
+      rgb(2, 26, 54, 1) 0%,
+      rgba(130,167,214,0.7) 90% 
+    ),
+    url(https://i.ibb.co/6F3Jyww/Vault-Boy-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 {
+    font-size: 5vw;
+    font-weight: 600;
+    font-family: "Monofonto", "Roboto";
+    text-transform: uppercase;
+    color: var(--color-secundary);
+    line-height: 1.2;
+    letter-spacing: 0.2rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+h1,
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+.message {
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  font-size: 1.5em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.success-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
